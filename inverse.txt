@@ -1,0 +1,24 @@
+<--------------------------------without inverse
+Hibernate: select max(ID) from USER_HISTORY
+Hibernate: insert into USERS (name, goal, total, id) values (?, ?, ?, ?)
+Hibernate: insert into USER_HISTORY (USER_ID, ENTRY_TIME, ENTRY, ID) values (?, ?, ?, ?)
+Hibernate: insert into USER_HISTORY (USER_ID, ENTRY_TIME, ENTRY, ID) values (?, ?, ?, ?)
+Hibernate: update USER_HISTORY set USER_ID=?, POSITION=? where ID=?
+Hibernate: update USER_HISTORY set USER_ID=?, POSITION=? where ID=?
+Sun Dec 10 18:23:11 IST 2017::Id has been set
+Sun Dec 10 18:23:11 IST 2017::Name has been set
+
+
+<------------------------With Inverse=true----------------------->
+Hibernate: select max(ID) from USER_HISTORY
+Hibernate: insert into USERS (name, goal, total, id) values (?, ?, ?, ?)
+Hibernate: insert into USER_HISTORY (USER_ID, ENTRY_TIME, ENTRY, ID) values (?, ?, ?, ?)
+Hibernate: insert into USER_HISTORY (USER_ID, ENTRY_TIME, ENTRY, ID) values (?, ?, ?, ?)
+Hibernate: update USER_HISTORY set POSITION=? where ID=?
+Hibernate: update USER_HISTORY set POSITION=? where ID=?
+Sun Dec 10 18:25:00 IST 2017::Id has been set
+Sun Dec 10 18:25:00 IST 2017::Name has been set
+
+
+
+
